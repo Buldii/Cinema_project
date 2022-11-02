@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(175,102,182,1) 54%, rgba(207,158,223,1) 100%); 
+    color: white;
+    overflow: hidden;
+}
+
+table {
+    padding: 20px;
+    position: relative;
+}
+
+td {
+    padding-right: 20px;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    padding: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    background-color: pink;
+    width: 100vw;
+}
+
+nav {
+    position: absolute;
+    top: 0%;
+    width: 100vw;
+    background-color: pink;
+}
+
+.kontakt {
+    transform: translateX(90%);
+    transform: translateY(1%);
+    float: right;
+    color: purple;
+}
+
+.footer__link {
+    padding: 20px;
+    text-decoration: none;
+    color: purple;
+}
