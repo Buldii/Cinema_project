@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    You have been gnomed
 </body>
 </html>
