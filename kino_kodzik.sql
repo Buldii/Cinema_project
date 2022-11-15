@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 15 Lis 2022, 19:19
+-- Czas generowania: 15 Lis 2022, 22:41
 -- Wersja serwera: 10.4.18-MariaDB
 -- Wersja PHP: 8.0.3
 
@@ -77,7 +77,12 @@ INSERT INTO `godziny` (`id`, `id_repertuar`, `godzina`) VALUES
 (2, 1, '12:00:00'),
 (3, 1, '13:00:00'),
 (4, 2, '17:00:00'),
-(5, 3, '19:00:00');
+(5, 3, '19:00:00'),
+(6, 4, '10:00:00'),
+(7, 5, '17:00:00'),
+(8, 6, '18:30:00'),
+(9, 7, '15:00:00'),
+(10, 7, '14:15:00');
 
 -- --------------------------------------------------------
 
@@ -94,6 +99,14 @@ CREATE TABLE `konta` (
   `imie` varchar(35) NOT NULL,
   `nazwisko` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `konta`
+--
+
+INSERT INTO `konta` (`id`, `login`, `email`, `haslo`, `nr_telefonu`, `imie`, `nazwisko`) VALUES
+(1, 'Admin', 'dfsafsd@onet.pl', '1234', '123456788', 'Krysatsda', 'dsadsadas'),
+(2, 'Admin2', 'asdas@sdfas', '1234', '12354765759', 'asda', 'dasdas');
 
 -- --------------------------------------------------------
 
@@ -113,9 +126,13 @@ CREATE TABLE `repertuar` (
 --
 
 INSERT INTO `repertuar` (`id`, `data`, `film`, `napisy`) VALUES
-(1, '2022-11-09', 1, 1),
-(2, '2022-11-09', 2, 0),
-(3, '2022-11-09', 3, 1);
+(1, '2022-11-16', 1, 1),
+(2, '2022-11-16', 2, 0),
+(3, '2022-11-16', 3, 1),
+(4, '2022-11-17', 4, 1),
+(5, '2022-11-17', 5, 0),
+(6, '2022-11-17', 6, 0),
+(7, '2022-11-18', 7, 1);
 
 -- --------------------------------------------------------
 
@@ -149,15 +166,13 @@ INSERT INTO `rezerwacje` (`id`, `id_klienta`, `rez_column`, `rez_row`, `id_reper
 (53, 2, 2, 3, 1, 1),
 (54, 2, 1, 5, 1, 1),
 (55, 2, 3, 5, 1, 1),
-(59, 2, 4, 5, 1, 1),
-(60, 2, 4, 6, 1, 1),
-(61, 2, 3, 6, 1, 1),
 (77, 1, 12, 7, 1, 1),
-(78, 1, 12, 6, 1, 1),
-(79, 1, 13, 6, 1, 1),
-(88, 1, 12, 5, 1, 1),
-(89, 1, 13, 5, 1, 1),
-(90, 2, 5, 5, 1, 1);
+(91, 2, 4, 5, 1, 1),
+(92, 2, 3, 6, 1, 1),
+(93, 2, 4, 6, 1, 1),
+(94, 1, 12, 6, 1, 1),
+(95, 1, 13, 6, 1, 1),
+(96, 1, 12, 5, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -286,25 +301,25 @@ ALTER TABLE `filmy`
 -- AUTO_INCREMENT dla tabeli `godziny`
 --
 ALTER TABLE `godziny`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT dla tabeli `konta`
 --
 ALTER TABLE `konta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `repertuar`
 --
 ALTER TABLE `repertuar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT dla tabeli `rezerwacje`
 --
 ALTER TABLE `rezerwacje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT dla tabeli `rezyser`
