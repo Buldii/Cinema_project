@@ -19,7 +19,7 @@
             // KALENDARZ
             if(!(isset($_GET['dzien']) && isset($_GET['miesiac'])&& isset($_GET['rok']))) {
                 $data = strtotime("now");
-                $href = 'http://localhost/kino/repertuar/repertuar.php?dzien='. date('d', $data) .'&miesiac='. date('m', $data).'&rok='. date('Y', $data);
+                $href = 'http://localhost/Cinema_project/repertuar/repertuar.php?dzien='. date('d', $data) .'&miesiac='. date('m', $data).'&rok='. date('Y', $data);
                 header("Location: ". $href);
             }
             $czas = "9-11-2022"; // CZAS USTAWIONY NA SZTYWNO
@@ -35,7 +35,7 @@
                     $href = '';
                 } else {
                     $class = 'czas';
-                    $href = 'http://localhost/kino/repertuar/repertuar.php?dzien='. date('d', $data) .'&miesiac='. date('m', $data).'&rok='. date('Y', $data);
+                    $href = 'http://localhost/Cinema_project/repertuar/repertuar.php?dzien='. date('d', $data) .'&miesiac='. date('m', $data).'&rok='. date('Y', $data);
                 }
                 
                 echo "<a href='". $href ."' class='". $class ."'>
