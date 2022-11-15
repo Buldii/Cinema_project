@@ -14,9 +14,9 @@
 </head>
 <body>
     <?php 
-    $_SESSION['user_id'] = 1; // TU DAJ ID SESJI !!!!!!!
+    // $_SESSION['user_id'] = 1; // TU DAJ ID SESJI !!!!!!!
     if (!isset($_SESSION['user_id'])) {
-        header("Location: ./dummy_site.php"); //TODO Replace for login site
+        header("Location: ../main_page/main_page.php"); //TODO Replace for login site
     }
     include_once './db_conn.php';
     $database = new Database();

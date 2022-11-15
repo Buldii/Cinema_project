@@ -1,1 +1,1 @@
-<?php header("Location: ./repertuar/repertuar.php"); ?>
+<?php header("Location: ./main_page/main_page.php"); ?>

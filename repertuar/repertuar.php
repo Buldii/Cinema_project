@@ -22,7 +22,8 @@
                 $href = 'http://localhost/Cinema_project/repertuar/repertuar.php?dzien='. date('d', $data) .'&miesiac='. date('m', $data).'&rok='. date('Y', $data);
                 header("Location: ". $href);
             }
-            $czas = "9-11-2022"; // CZAS USTAWIONY NA SZTYWNO
+            // $czas = "9-11-2022"; // CZAS USTAWIONY NA SZTYWNO
+            $czas = date('d-m-Y'); // CZAS USTAWIONY NA SZTYWNO
             $dni_tygodnia = array( 'Nd', 'Pn', 'Wt', 'Śr', 'Cz', 'Pt', 'So' );
             for ($add=0; $add < 8; $add++) { 
                 $data = strtotime($czas. "+".$add."day");

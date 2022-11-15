@@ -15,7 +15,7 @@
 <body>
     <div class="bg"></div>
     <nav>
-      <a href="main_page.php">
+      <a href="../main_page/main_page.php">
         <img src="./img/logo 3.png" alt="logo" class="nav__logo" />
       </a>
       <a href="../repertuar/repertuar.php">Repertuar</a>
@@ -74,7 +74,7 @@
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
-        header('Location: http://localhost/kino kodzik/podziekowanie.html');
+        header('Location: ./podziekowanie.html');
     }
 
     mysqli_close($conn);

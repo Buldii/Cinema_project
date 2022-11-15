@@ -1,3 +1,4 @@
+<?php header("Location ../main_page/main_page.php") ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

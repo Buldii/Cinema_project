@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +16,7 @@
 <body>
   <div class="bg"></div>
   <nav>
-      <a href="main_page.php">
+      <a href="../main_page/main_page.php">
         <img src="./img/logo 3.png" alt="logo" class="nav__logo" />
       </a>
       <a href="../repertuar/repertuar.php">Repertuar</a>
@@ -57,20 +58,15 @@
   if (isset($_POST['login']) && isset($_POST['password']) && isset($_POST['loguj'])) {
 
     $login = @$_POST['login'];
-    $hasło = @$_POST['password'];
-    $sql = "SELECT * FROM dane where login='$login' and password='$hasło';";
+    $haslo = @$_POST['password'];
+    $sql = "SELECT * FROM konta where login='$login' and haslo='$haslo';";
     $result = mysqli_query($conn, $sql);
-    while ($row = mysqli_fetch_array($result)) {
-      //var_dump($row);
-      echo @$row[0];
-      echo $row[1];
-      echo $row[2];
-      echo $row[3];
-      echo $row[4];
+    if ($row = mysqli_fetch_array($result)) {
+      $_SESSION['user_id'] = $row["id"];
+      header('Location: ../main_page/main_page.php');
     }
   }
-
-  session_start
+  // var_dump($_SESSION);
 
   mysqli_close($conn);
   ?>
