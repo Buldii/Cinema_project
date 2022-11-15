@@ -1,0 +1,113 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 55%;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(3px);
+    min-height: calc(100vh - 140px);
+    color: white;
+    padding: 0 5rem;
+}
+
+.gray {
+    color: darkgrey;
+}
+
+.film__titles {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.film__titles > h3{
+    font-size: 2.5rem;
+}
+
+.film__titles > p{
+    font-size: 1.25rem;
+}
+
+.film__poster {
+    min-width: 200px;
+    min-height: 285px;
+    position: relative;
+    float: left;
+}
+
+.film__poster:is(:link, :visited) {
+    text-decoration: none;
+    color: white;
+
+}
+
+.play_button {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: calc(50% - 2rem);
+    top: calc(50% - 2rem);
+    opacity: 0.75;
+}
+
+.play_button > div {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+}
+
+.play_button > div > div {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 1.5rem);
+    top: calc(50% - 1.5rem);
+    z-index: 5;
+}
+
+.play_button img {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    z-index: 10;
+}
+
+.film__details {
+    width: 50%;
+}
+
+.film__info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.photos {
+    margin: 2rem 0 .5rem;
+    padding: 0 5rem;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+.photos h6 {
+    margin-bottom: 2rem;
+}
+
+.photos img {
+    max-width: 10rem;
+    min-height: 7rem;
+    border: 3px solid black;
+    box-shadow: 0px 0px 100px -43px rgba(0, 0, 0, 1);
+    margin: 0 1rem;
+}

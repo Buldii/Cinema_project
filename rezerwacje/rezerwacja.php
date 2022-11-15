@@ -29,7 +29,7 @@
     $row = $stmt->fetch();
     // Zapytanie czy właściwy tytuł jeśli nie przekierowanie na repertuar
     $filmTitle = $row['nazwa']; //$_GET["$filmTitle"]
-    $filmDate = $row['data'] . "<br>" . substr($row['godzina'], 0, 5); //$_GET["FilmDate"] . $_GET["FilmTime"]
+    $filmDate = $row['data'] . "<br>" . substr($row['godzina'], 0, 5);
     ?>
     <?php include_once '../header_footer/header.php' ?>
     <main class="reservation">

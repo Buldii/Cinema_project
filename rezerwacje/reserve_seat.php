@@ -7,17 +7,19 @@ try {
     $db_name = 'kino_kodzik';
     $username = 'root';
     $password = '';
-    // $db = $database->connect();
-    // $sql = "INSERT INTO `rezerwacje` (`id`, `id_klienta`, `rez_column`, `rez_row`, `id_repertuar`, `id_godzina`) VALUES (NULL, '" . $input['id_klienta'] . "', '". $input['column'] ."', '". $input['row'] ."', '". $input['id_repertuaru'] ."', '". $input['id_godzina'] ."')";
-    // $stmt = $db->prepare($sql);
-    // $stmt->execute();
     $db = new mysqli($host, $username, $password, $db_name);
-    $sql = "INSERT INTO `rezerwacje` (`id`, `id_klienta`, `rez_column`, `rez_row`, `id_repertuar`, `id_godzina`) VALUES (NULL, '" . $input['id_klienta'] . "', '". $input['column'] ."', '". $input['row'] ."', '". $input['id_repertuaru'] ."', '". $input['id_godzina'] ."')";
+    $sql = "SELECT COUNT(id) as 'Ilosc' FROM rezerwacje WHERE id_klienta=" . $input['id_klienta'] . " AND id_godzina=" . $input['id_godzina'];
     $result = $db->query($sql);
-    // $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    
-    
-    echo json_encode(array("status" => "ok"));
+    $ilosc = $result->fetch_assoc();
+    // Ograniczenie ilosci miejsc na użytkownika
+    if ((int)$ilosc["Ilosc"] <= 8) {
+        $sql = "INSERT INTO `rezerwacje` (`id`, `id_klienta`, `rez_column`, `rez_row`, `id_repertuar`, `id_godzina`) VALUES (NULL, '" . $input['id_klienta'] . "', '". $input['column'] ."', '". $input['row'] ."', '". $input['id_repertuaru'] ."', '". $input['id_godzina'] ."')";
+        $result = $db->query($sql);
+        echo json_encode(array("status" => "ok", "ilosc" => $ilosc));
+    }
+    else {
+        echo json_encode(array("status" => "zabroniono", "ilosc" => $ilosc));
+    }
     
 } catch (\Throwable $th) {
     echo json_encode(["line" => $th->getLine(), "mess"=>$th->getMessage()]);

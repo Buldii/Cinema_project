@@ -70,7 +70,10 @@ async function reserveSeat(e) {
         body: JSON.stringify({'row': row, 'column': column, 'id_repertuaru': id_repertuaru, 'id_godzina': id_godzina, 'id_klienta': id_klienta})
     })
     console.log(response)
-    x = await response.text()
+    x = await response.json()
+    if (x.status == "zabroniono") {
+        alert("Zbyt wiele miejsc!")
+    }
     console.log(x)
     drawSeats()
 }
@@ -98,7 +101,7 @@ async function deleteSeat(e) {
 
 
 drawSeats()
-// let x = setInterval(drawSeats, 1000)
+let x = setInterval(drawSeats, 1000)
 
 
 

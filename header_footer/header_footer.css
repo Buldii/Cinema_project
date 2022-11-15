@@ -72,4 +72,7 @@ body {
     background-image: url('../img/kino2.jpg');
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
