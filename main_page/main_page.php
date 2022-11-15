@@ -34,7 +34,7 @@
                 $wynik.= '
                 <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
-                <a href="cennik.html">
+                <a href="../film_site/film_site.php?film_id='.$row['id'].'">
                 <img src="' . $row ['link']. '" style="width:100%">
                 </a>
                 <div class="text">'.$row ['nazwa'].'</div>
@@ -49,7 +49,7 @@
                 $wynik.= '
                 <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
-                <a href="cennik.html">
+                <a href="../film_site/film_site.php?film_id='.$row['id'].'">
                 <img src="' . $row ['link']. '" style="width:100%">
                 </a>
                 <div class="text">'.$row ['nazwa'].'</div>
@@ -64,7 +64,7 @@
                 $wynik.= '
                 <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
-                <a href="cennik.html">
+                <a href="../film_site/film_site.php?film_id='.$row['id'].'">
                 <img src="' . $row ['link']. '" style="width:100%">
                 </a>
                 <div class="text">'.$row ['nazwa'].'</div>
@@ -78,7 +78,7 @@
                 while ($row = $result->fetch_assoc()) {
                     $films .= 
                     '
-                    <a class="zdjecia" href="."TODO DOADAĆ LINK".">
+                    <a class="zdjecia" href="../film_site/film_site.php?film_id='.$row['id'].'">
                         <img src='. $row['plakat'] .' alt="">
                         <h5>'. $row['nazwa'] .'</h5>
                     </a>

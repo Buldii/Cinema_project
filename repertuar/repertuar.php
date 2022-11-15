@@ -79,7 +79,9 @@
             "<div class='repertuar-film'>
                 <img src='". $film['plakat']  ."'>
                 <div class='info'>
+                <a href='../film_site/film_site.php?film_id=".$film['id']."' >
                 <h6>". $film['nazwa'] . " / " . ((int) $film['napisy'] == 1 ? 'Napisy' : 'Dubbing') ."</h6>
+                </a>
                 <p>Od lat: ". $film['minimalny_wiek'] . ", Czas trwania: ". $film['czas_trwania'] .".</p>
                 <p>Produkcja: ". $film["kraj_produkcji"] . " [" . $film['rok_produkcji'] . "]</p>
                 <br>
