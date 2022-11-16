@@ -1,0 +1,11 @@
+CREATE TABLE filmy (id int AUTO_INCREMENT NOT NULL PRIMARY KEY, rezyser int NOT NULL, nazwa varchar(50) NOT NULL, kraj_produkcji varchar(30) NOT NULL, rok_produkcji SMALLINT NOT NULL, czas_trwania SMALLINT NOT NULL, minimalny_wiek TINYINT NOT NULL, opis varchar(1000) NOT NULL, gatunek varchar(40) NOT NULL, trailer_link varchar(512) NOT NULL, plakat int NOT NULL, oryginalna_nazwa varchar(50) NOT NULL)
+
+CREATE TABLE konta (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, login varchar(50) NOT NULL, email varchar(75) NOT NULL, haslo varchar(50) NOT NULL, nr_telefonu varchar(16) NOT NULL, imie varchar(35) NOT NULL, nazwisko varchar(45) NOT NULL)
+
+CREATE TABLE rezyser (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, imie varchar(35) NOT NULL, nazwisko varchar(45) NOT NULL)
+
+CREATE TABLE repertuar (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, data date NOT NULL, film int NOT NULL, napisy BOOLEAN NOT NULL)
+
+CREATE TABLE zdjecia (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, id_film int NOT NULL, link varchar(512) NOT NULL)
+
+CREATE TABLE godziny (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, id_repertuar int NOT NULL, godzina TIME (0) NOT NULL)
