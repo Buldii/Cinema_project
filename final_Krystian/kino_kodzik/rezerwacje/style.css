@@ -1,0 +1,120 @@
+:root {
+    --free: black;
+    --occupied: blue;
+    --user-seats: red;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: aliceblue;
+}
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(3px);
+    min-height: calc(100vh - 140px);
+}
+
+.reservation-info {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.reservation-info__title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.screen__dummy-screen {
+    width: calc(100% - 2.2rem);
+    float: right;
+    background-color: white;
+    height: 1%;
+}
+
+.screen__text {
+    text-align: center;
+}
+
+.screen {
+    margin-bottom: 1rem;
+}
+
+/* Free Seat */
+.seats td {
+    min-width: 2rem;
+    background-color: blueviolet;
+    text-align: center;
+}
+
+.seats td:hover:not(.seats tr td:hover:first-child) {
+    cursor: pointer;
+}
+
+.seats tr {
+    height: 2rem;
+}
+
+/* User Seat */
+.seats td.seats__seat--user {
+    background-color: aqua;
+    border: royalblue 1px solid;
+}
+
+.seats td.seats__seat--occupied {
+    background-color: brown;
+}
+
+.marker {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.aqua {
+    background-color: aqua;
+}
+
+.blueviolet {
+    background-color: blueviolet;
+}
+
+.legenda {
+    display: flex;
+    margin-top: 2.5rem;
+}
+
+.legenda div {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-left: .5rem;
+    margin-right: 1rem;
+}
