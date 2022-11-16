@@ -1,0 +1,1 @@
+<?php header("Location: ./main_page/main_page.php"); ?>

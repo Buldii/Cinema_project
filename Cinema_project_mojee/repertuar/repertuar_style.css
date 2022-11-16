@@ -1,0 +1,143 @@
+:root {
+    --color1: #bc13fe;
+    --color2: #4c377c;
+    --color3: #9848a2;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../img/kino2.jpg);
+    min-height: 100vh;
+    color: white;
+}
+
+
+.off {
+    pointer-events: none;
+}
+
+.repertuar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 55%;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(3px)
+}
+
+.czas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border: white solid 2px;
+    border-radius: 0.75rem;
+    transition: all .25s;
+}
+
+.czas:hover {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.1rem #bc13fe, 0 0 1.1rem #bc13fe, inset 0 0 2.5rem #bc13fe;
+}
+
+.repertuar-data {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.repertuar-data a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.repertuar-data a:is(:visited, :link) {
+    color: white;
+    text-decoration: none;
+}
+
+.repertuar-film {
+    width: 100%;
+    position: relative;
+    padding: 25px;
+    /* border: black solid 1px; */
+}
+
+.repertuar-film:not(:last-child) {
+    padding-bottom: 40px;
+}
+
+.repertuar-film:not(:last-child)::after{
+    content: "";
+    width: 65%;
+    height: 1%;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.1rem #bc13fe, 0 0 1.1rem #bc13fe, inset 0 0 2.5rem #bc13fe;
+    position: absolute;
+    bottom: 5px;
+    left: 17.5%;
+}
+
+.repertuar-film img{
+    float: left;
+    left: 0;
+    top: 0;
+    max-width: 175px;
+    max-height: 245px;
+    /* border: black 2px solid; */
+    /* box-shadow: 0px 0px 100px -70px rgba(0, 0, 0, 1); */
+    box-shadow: 0px 0px 100px -43px rgba(0, 0, 0, 1);
+}
+
+.repertuar-film h6 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.info p{
+    font-size: 1rem;
+}
+
+.info a{
+    text-decoration: none;
+    color: white;
+}
+
+.repertuar-film .info {
+    padding-left: 12.75rem;
+}
+
+.repertuar-film .godzina:is(:link, :visited) {
+    color: white;
+    text-decoration: none;
+}
+
+.repertuar-film .godzina {
+    padding: .75rem 1.75rem;
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 0.75rem;
+    margin-top: 3.5rem;
+    margin-right: 1rem;
+    transition: all .25s;
+}
+
+.repertuar-film .godzina:hover {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.1rem #bc13fe, 0 0 1.1rem #bc13fe, inset 0 0 2.5rem #bc13fe;
+}

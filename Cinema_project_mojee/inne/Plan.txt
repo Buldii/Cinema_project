@@ -1,0 +1,14 @@
+Priorytety:
+ - możliwość sprawdzenia repertuaru
+ - rejestracja/logowanie 
+ - rezerwacja
+ - baza filmów 
+ - cennik
+
+side quest:
+ - kod biletu
+ - estetyka
+ - wyszukiwanie filmów po nazwie
+ - recenzje pod filmem 
+ - archiwa
+ - admin panel
