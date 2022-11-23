@@ -1,0 +1,221 @@
+:root {
+  --color1: #bc13fe;
+  --color2: #4c377c;
+  --color3: #9848a2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  flex-direction: column;
+  background-image: url(../img/kino4.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.name {
+  font-size: 20px;
+}
+
+.bg {
+  position: absolute;
+  background-color: black;
+  height: 100vh;
+  width: 50vw;
+  opacity: 0.5;
+  backdrop-filter: blur(3px);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background-color: black;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+
+nav {
+  position: absolute;
+  top: 0%;
+  width: 100vw;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  position: relative;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 7px var(--color1), 0 0 10px var(--color1),
+    0 0 21px var(--color1), 0 0 42px var(--color1), 0 0 82px var(--color1),
+    0 0 92px var(--color1), 0 0 102px var(--color1), 0 0 151px var(--color1);
+  transition: 0.3s;
+}
+
+.nav__logo {
+  position: relative;
+  max-height: 70px;
+  left: 0;
+}
+
+.kontakt {
+  color: white;
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.footer__link {
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__link:hover {
+  color: #fff;
+  text-shadow: 0 0 7px var(--color1), 0 0 10px var(--color1),
+    0 0 21px var(--color1), 0 0 42px var(--color1), 0 0 82px var(--color1),
+    0 0 92px var(--color1), 0 0 102px var(--color1), 0 0 151px var(--color1);
+  transition: 0.3s;
+}
+
+h1 {
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  top: 30vh;
+  border: white solid 2px;
+  border-radius: 20px;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.1rem #bc13fe, 0 0 1.1rem #bc13fe, inset 0 0 2.5rem #bc13fe;
+  animation: pulsate_box 1.5s infinite alternate;
+}
+
+form {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  transform: translateY(20px);
+}
+
+.button {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15vw;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.1rem #bc13fe, 0 0 1.1rem #bc13fe, inset 0 0 2.5rem #bc13fe;
+  color: white;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translateY(10px);
+}
+
+.login__input {
+  margin-bottom: 10px;
+  padding: 7px;
+  width: 20vw;
+  transition: 0.2s all;
+}
+
+.login__input:focus {
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.password__input {
+  /* padding-bottom: 20px; */
+  padding: 7px;
+  width: 20vw;
+  transition: 0.2s all;
+}
+
+.password__input:focus {
+  border-radius: 10px;
+  padding: 15px;
+}
+.logowanie {
+  position: relative;
+  padding-top: 35px;
+  font-size: 17px;
+}
+
+.logowanie a {
+  text-decoration: none;
+  color: var(--color1);
+  
+}
+
+.logowanie a:hover {
+  text-shadow: 0 0 7px var(--color1), 0 0 10px var(--color1),
+  0 0 21px var(--color1), 0 0 42px var(--color1), 0 0 82px var(--color1),
+  0 0 92px var(--color1), 0 0 102px var(--color1), 0 0 151px var(--color1);
+transition: 0.3s;
+}
+
+@keyframes pulsate_box {
+  100% {
+    box-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 20px #bc13fe,
+      0 0 30px #bc13fe, 0 0 50px #bc13fe, 0 0 40px #bc13fe, 0 0 50px #bc13fe;
+  }
+
+  0% {
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #bc13fe,
+      0 0 25px #bc13fe, 0 0 25px #bc13fe, 0 0 30px #bc13fe, 0 0 50px #bc13fe;
+  }
+}
+
+@keyframes pulsate_text {
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 20px #bc13fe,
+      0 0 30px #bc13fe, 0 0 50px #bc13fe, 0 0 40px #bc13fe, 0 0 50px #bc13fe;
+  }
+
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #bc13fe,
+      0 0 25px #bc13fe, 0 0 25px #bc13fe, 0 0 30px #bc13fe, 0 0 50px #bc13fe;
+  }
+}
